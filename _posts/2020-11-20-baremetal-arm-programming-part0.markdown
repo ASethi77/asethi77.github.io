@@ -1,15 +1,58 @@
 ---
-title:  "Baremetal ARM Programming Part 0 - Getting into main()"
+title:  "Baremetal ARM Programming The Hard Way: Part 0 - Getting to `main()`"
 date:   2020-11-20 22:22:22
 description: Horror Tragedy Adventure
 ---
 
+- [Startup assembler](#startup-assembler)
+
 Join me in an adventure to understand how the hell an ARM Cortex-M0 processor starts up.
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+Please note that the exact hardware I will be using throughout this will be a Nordic
+nRF51-DK eval board; therefore there may be some variations between the code you and I develop,
+but I hope that this information proves valuable or educational to you in one way or the other.
+Please also note that I am in some instances doing things the hard way (i.e. using nothing but
+ARMv6-M documentation + my processor's product specification) as a forcing function to become
+more comfortable with ARM and digging through firsthand source documentation; there are already
+working BSPs, ARM tutorials, blogs, etc. that cover similar concepts for e.g. an STM32, but
+it's also extremely easy to take those building blocks for granted and hit a wall when working
+with more complex or exotic hardware. In any case, I will point to ARM and/or processor TRMs
+as required to highlight the source of a concept, and if I choose to skip over something,
+I'll explain why and point to the source I referenced to keep moving.
 
-Jekyll also offers powerful support for code snippets:
+# Startup assembler
+
+The first thing to figure out before getting to `main()` is what to do at the very first
+instruction the processor executes at address `0x00000000`. Notably, this address is also
+the start of the interrupt vector table, which is in essence a table of pointers to interrupt
+handlers for each type of interrupt that the device may produce.
+
+Per ARM DDI 0419E "ARMv6-M Architecture Reference Manual" (page 192), Table B1-4
+"Vector Table Format," the interrupt vector table is structured as follows:
+
+| Index  | Description                          |
+|--------|--------------------------------------|
+| 0      | Initial address of the stack pointer |
+| 1      | Reset vector                         |
+| 2      | Non-maskable interrupt (NMI)         |
+| 3      | HardFault                            |
+| 4-10   | Reserved                             |
+| 11     | SVCall                               |
+| 12-13  | Reserved                             |
+| 14     | PendSV                               |
+| 15     | SysTick                              |
+| 16     | External Interrupt 0                 |
+| 17     | External Interrupt 1                 |
+| 16 + N | External Interrupt N (N <= 31)       |
+
+The external interrupts that must be supported will vary between platforms and the peripherals
+they provide. For the Nordic
+nRF51, Section 9.1.6 "Interrupts" in the nRF51 Series Reference Manual (v2.1) specfies that the
+external interrupt # is specified by the "peripheral ID" of the peripheral; for the nRF51422,
+the peripheral table is in Section 5 "Instance Table" of the nRF51422 Product Specification (v3.1).
+
+Also of note is index 0 (i.e. address 0x00000000), which the processor uses to initialize the
+value of the stack pointer. Again, 
 
 ```arm
 .text
