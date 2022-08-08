@@ -1,3 +1,5 @@
 _site/
 .sass-cache/
 .DS_Store
+full-of-empty-space/src/tailwind.css
+full-of-empty-space/package-lock.json
