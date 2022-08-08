@@ -8,13 +8,13 @@ function App() {
   
   return (
     <div id="LandingPage">
-      <div className="hero min-h-[80vh] border-opacity-100" style={{
+      <div className="hero min-h-screen lg:min-h-[80vh] border-opacity-100 bg-cover" style={{
             backgroundImage: `url('data:image/svg+xml;utf8, ${svgString}')`
         }}>
         <div className="hero-content text-center bg-accent">
           <div className="max-w-max-content">
-            <h1 className="text-8xl font-bold animate-fadeIn text-accent-content">full of empty space</h1>
-            <h2 className="text-3xl py-9 animate-fadeIn text-accent-content">stories of a nerd screaming into the void</h2>
+            <h1 className="text-3xl lg:text-8xl font-bold animate-fadeIn text-accent-content">full of empty space</h1>
+            <h2 className="text-2xl lg:text-4xl py-2 lg:py-9 animate-fadeIn text-accent-content">tales from a nerd screaming into the void</h2>
           </div>
         </div>
       </div>
