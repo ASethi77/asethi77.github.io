@@ -9,6 +9,11 @@ clone this
 
 code
 
+# To Deploy
+
+`npm run predeploy`
+`npm run deploy`
+
 ## Tailwind themes
 
 Themes are in src/tailwind.config.js
