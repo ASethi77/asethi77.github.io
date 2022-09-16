@@ -1,0 +1,120 @@
+/* color palette from <https://github.com/vuejs/theme> */
+
+/* the props */
+@import "open-props/style";
+
+/* optional imports that use the props */
+@import "open-props/normalize";
+@import "open-props/buttons";
+
+/* individual imports */
+@import "open-props/indigo";
+@import "open-props/easings";
+@import "open-props/animations";
+@import "open-props/sizes";
+@import "open-props/gradients";
+
+/* Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
+/* Noto Sans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Merriweather */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  color-scheme: light;
+
+  --blog-c-white: #ffffff;
+  --blog-c-white-soft: #f8f8f8;
+  --blog-c-white-mute: #f2f2f2;
+
+  --blog-c-black: #181818;
+  --blog-c-black-soft: #222222;
+  --blog-c-black-mute: #28282828;
+
+  /* Light Theme */
+  --blog-c-bg-light: var(--gray-4);
+  --blog-c-bg-soft: var(--gray-1);
+  --blog-c-bg-mute: var(--gray-2);
+  --blog-c-fg-light: var(--gray-9);
+  --blog-c-text1-light: var(--blue-9);
+  --blog-c-text2-light: var(--gray-7);
+  --blog-c-text3-light: var(--pink-8);
+  --blog-c-text4-light: var(--yellow-9);
+  --blog-c-text5-light: var(--lime-8);
+  --blog-c-text6-light: var(--cyan-8);
+
+  /* Dark Theme */
+  --blog-c-bg-dark: var(--gray-8);
+  --blog-c-bg-soft: var(--gray-7);
+  --blog-c-bg-mute: var(--gray-6);
+  --blog-c-fg-dark: var(--gray-4);
+  --blog-c-text1-dark: var(--red-5);
+  --blog-c-text2-dark: var(--gray-3);
+  --blog-c-text3-dark: var(--lime-3);
+  --blog-c-text4-dark: var(--cyan-2);
+  --blog-c-text5-dark: var(--violet-2);
+  --blog-c-text6-dark: var(--orange-3);
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+
+  --blog-bg: var(--blog-c-bg-light);
+  --blog-bg-soft: var(--blog-c-bg-soft);
+  --blog-bg-mute: var(--blog-c-bg-mute);
+  --blog-fg: var(--blog-c-fg-light);
+  --blog-text1: var(--blog-c-text1-light);
+  --blog-text2: var(--blog-c-text2-light);
+  --blog-text3: var(--blog-c-text3-light);
+  --blog-text4: var(--blog-c-text4-light);
+  --blog-text5: var(--blog-c-text5-light);
+  --blog-text6: var(--blog-c-text6-light);
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+
+  --blog-bg: var(--blog-c-bg-dark);
+  --blog-bg-soft: var(--blog-c-bg-soft);
+  --blog-bg-mute: var(--blog-c-bg-mute);
+  --blog-fg: var(--blog-c-fg-dark);
+  --blog-text1: var(--blog-c-text1-dark);
+  --blog-text2: var(--blog-c-text2-dark);
+  --blog-text3: var(--blog-c-text3-dark);
+  --blog-text4: var(--blog-c-text4-dark);
+  --blog-text5: var(--blog-c-text5-dark);
+  --blog-text6: var(--blog-c-text6-dark);
+}
+
+.text1{
+  color: var(--blog-text1);
+}
+
+.text2{
+  color: var(--blog-text2);
+}
+
+.text3{
+  color: var(--blog-text3);
+}
+
+.text4{
+  color: var(--blog-text4);
+}
+
+.text5{
+  color: var(--blog-text5);
+}
+
+.text6{
+  color: var(--blog-text6);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--blog-fg);
+  background: var(--blog-bg);
+  line-height: 1.6;
+  font-family: 'Noto Sans', sans-serif;
+}
