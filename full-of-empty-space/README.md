@@ -1,35 +1,29 @@
-# Full of empty space
+# Gridsome Blog Starter
 
-This template should help get you started developing with Vue 3 in Vite.
+> A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
 
-## Recommended IDE Setup
+## Features
+- Beautiful and simple design.
+- Markdown for content.
+- Tags support.
+- Dark / Light toggle.
+- CSS variables, SCSS & BEM for styling.
+- 100, 100, 100, 100 score on Google Lighthouse.
+- Uses same front-matter fields as Dev.to.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Demo URL
 
-## Customize configuration
+https://gridsome-starter-blog.netlify.com
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Install
 
-## Project Setup
+### 1. Install Gridsome CLI tool if you don't have
 
-```sh
-npm install
-```
+`npm install --global @gridsome/cli`
 
-### Compile and Hot-Reload for Development
+### 2. Install this starter
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+1. `gridsome create my-gridsome-site https://github.com/gridsome/gridsome-starter-blog.git`
+2. `cd my-gridsome-site` to open folder
+3. `gridsome develop` to start local dev server at `http://localhost:8080`
+4. Happy coding 🎉🙌
