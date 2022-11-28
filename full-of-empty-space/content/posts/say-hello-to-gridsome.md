@@ -4,7 +4,7 @@ date: 2019-02-07
 tags: ['Markdown', 'Releases']
 canonical_url: false
 description: "A new static site generator baby is born. It's highly inspired by Gatsby.js (React based) but built on top of Vue.js. We have been working on it for a year and will have a beta ready soon. You can expect this baby to grow up fast!"
-
+cover_image: ./images/alexandr-podvalny-220262-unsplash.jpg
 ---
 
 A new static site generator baby is born. It's highly inspired by Gatsby.js (React based) but built on top of Vue.js. We have been working on it for a year and will have a beta ready soon. You can expect this baby to grow up fast!

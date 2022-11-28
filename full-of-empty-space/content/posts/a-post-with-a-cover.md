@@ -4,6 +4,7 @@ description: Walkthrough of designing a BLDC Field Oriented Controller
 date: 2022-02-16
 published: true
 tags: ['Quadcopter']
+cover_image: ./images/alexandr-podvalny-220262-unsplash.jpg
 ---
 
 I have been unimpressed with the BLDC ESCs available for a quadcopter. They do not offer telemetry back to the
