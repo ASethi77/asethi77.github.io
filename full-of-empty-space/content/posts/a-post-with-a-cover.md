@@ -4,7 +4,7 @@ description: Walkthrough of designing a BLDC Field Oriented Controller
 date: 2022-02-16
 published: true
 tags: ['Quadcopter']
-cover_image: ./images/alexandr-podvalny-220262-unsplash.jpg
+cover_image: ./images/pcb.webp
 ---
 
 I have been unimpressed with the BLDC ESCs available for a quadcopter. They do not offer telemetry back to the
@@ -50,7 +50,7 @@ For dev boards I'm looking to use the following part:
 The [Infineon product selection guide](https://www.mouser.com/catalog/additional/Infineon_PowerandSensingSelectionGuide2020_B.pdf) also is helpful
 for identifying which families of (their) parts may be relevant for an ESC. Of particular note is this MCU family comparison:
 
-![Infineon MCU family comparison](/foc_esc_images/Infineon_MCU_Family_Comparison.png)
+![Infineon MCU family comparison](./images/Infineon_MCU_Family_Comparison.png)
 
 Note that the TLE987x family is the only one that uses a B6 bridge, or a three-phase bridge rectifier, to drive a motor.
 This suggests that the TLE987x IC is designed explicitly for brushless motor control, while the other families in the table above
