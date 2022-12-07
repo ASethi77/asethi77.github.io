@@ -11,17 +11,33 @@ module.exports = {
   pathPrefix: '/',
 
   templates: {
-    Post: '/:title',
+    // Post: '/:title',
     Tag: '/tag/:id'
   },
 
   plugins: [
+    // {
+    //   // Create posts from markdown files
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'Post',
+    //     path: 'content/posts/*.md',
+    //     refs: {
+    //       // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+    //       tags: {
+    //         typeName: 'Tag',
+    //         create: true
+    //       }
+    //     }
+    //   }
+    // }
     {
-      // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/vue-remark',
       options: {
-        typeName: 'Post',
-        path: 'content/posts/*.md',
+        typeName: 'Post', // Required
+        baseDir: './content/posts/', // Where .md files are located
+        pathPrefix: '/posts', // Add route prefix. Optional
+        template: './src/templates/Post.vue', // Optional
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {

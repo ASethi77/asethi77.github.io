@@ -19,7 +19,6 @@ query {
         id
         title
         date (format: "D. MMMM YYYY")
-        timeToRead
         description
         cover_image (width: 770, height: 380, blur: 10)
         path
@@ -44,7 +43,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'You are here'
   }
 }
 </script>

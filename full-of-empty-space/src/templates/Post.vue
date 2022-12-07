@@ -14,10 +14,11 @@
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
-      <div class="post__content" v-html="$page.post.content" />
+      <!-- <div class="post__content" v-html="$page.post.content" /> -->
+      <VueRemarkContent />
 
       <div class="post__footer">
-        <PostTags :post="$page.post" />
+      <PostTags :post="$page.post" />
       </div>
     </div>
 
@@ -60,7 +61,6 @@ query Post ($id: ID!) {
     title
     path
     date (format: "D. MMMM YYYY")
-    timeToRead
     tags {
       id
       title
