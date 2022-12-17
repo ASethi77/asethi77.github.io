@@ -17,6 +17,20 @@ module.exports = {
           900: colors.cyan[800],
           50: "#d8efdc"
         }
+      },
+      fontSize: {
+        sm: '0.8rem',
+        base: '1rem',
+        lg: "1.125rem",
+        xl: '1.25rem',
+        "2xl": '1.563rem',
+        "3xl": '2rem',
+        "4xl": '2.75rem',
+        "5xl": '3.5rem',
+        "6xl": '5rem',
+        "7xl": '7.5rem',
+        "8xl": '10rem',
+        "9xl": '12rem'
       }
     },
   },

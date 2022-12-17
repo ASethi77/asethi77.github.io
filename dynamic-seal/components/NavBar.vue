@@ -11,7 +11,7 @@
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="lg:flex-grow">
-      <a v-for="link in linkList" :href="link.linkUrl" className="text-lg block mx-8 mt-4 lg:inline-block lg:mt-0 hover:text-cyan-500">{{link.linkText}}</a>
+      <a v-for="link in linkList" :href="link.linkUrl" className="text-xl lg:text-2xl block mx-8 mt-4 lg:inline-block lg:mt-0 hover:text-cyan-500">{{link.linkText}}</a>
     </div>
     <button class="text-foreground-50 text-3xl" type="button" @click=nightwind.toggle()><font-awesome-icon icon="fa-solid fa-moon" /></button>
   </div>
