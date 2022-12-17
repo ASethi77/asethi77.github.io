@@ -3,9 +3,13 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/content',
         '@nuxtjs/tailwindcss'
-      ],
-      content: {
+    ],
+    content: {
         // https://content.nuxtjs.org/api/configuration
         documentDriven: true
-      }
+    },
+    css: [
+        '@/assets/css/main.scss',
+        '@fortawesome/fontawesome-svg-core/styles.css'
+    ]
 })

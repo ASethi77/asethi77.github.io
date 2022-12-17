@@ -5,11 +5,31 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
     "@nuxt/content": "^2.3.0",
     "@nuxtjs/tailwindcss": "^6.1.3",
-    "nuxt": "3.0.0"
+    "nuxt": "3.0.0",
+    "push-dir": "^0.4.1",
+    "sass": "^1.57.0",
+    "sass-loader": "^10.4.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/vue-fontawesome": "^3.0.2",
+    "@headlessui/vue": "^1.7.7",
+    "@heroicons/vue": "^2.0.13",
+    "nightwind": "^1.1.12",
+    "tailwindcss": "^3.2.0"
+  },
+  "overrides": {
+    "nightwind": {
+      "tailwindcss": "^3.2.0"
+    }
   }
 }
