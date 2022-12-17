@@ -24,14 +24,6 @@ export default {
         canvasHeight: Number
     },
     methods: {
-        toggleTheme() {
-            this.darkTheme = !this.darkTheme
-
-            // This is using a script that is added in index.html
-            window.__setPreferredTheme(
-                this.darkTheme ? 'dark' : 'light'
-            )
-        }
     },
     mounted() {
         let canvasElement = this.$el.querySelector("#canvas-container");
@@ -69,8 +61,4 @@ export default {
 </script>
 
 <style>
-#canvas-container {
-    width: 800px;
-    height: 800px;
-}
 </style>

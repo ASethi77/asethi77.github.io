@@ -12,4 +12,4 @@ import ThreeJsPreview from "~/components/ThreeJsPreview.vue";
 
 So I'd made an enclosure for my 3d printer 
 
-<ThreeJsPreview canvasWidth="800px" canvasHeight="800px"></ThreeJsPreview>
+<ThreeJsPreview canvasWidth="700px" canvasHeight="700px"></ThreeJsPreview>
