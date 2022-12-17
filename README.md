@@ -2,12 +2,13 @@
 
 clone this
 
-`npm ci` (or `npm install`)
-
-`npm run dev`
+`cd full-of-empty-space`
+`npm install`
+`npm run develop`
 
 code
 
 # To Deploy
 
-`npm run build`
+`npm run predeploy`
+`npm run deploy`
