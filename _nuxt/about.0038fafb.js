@@ -1,0 +1,1 @@
+import{K as e,o,C as s,V as t,D as c}from"./entry.0184f530.js";const r=""+globalThis.__publicAssetsURL("video/nerd.mp4"),a={},n={class:"w-screen h-screen",control:"",autoplay:""},_=c("source",{src:r,type:"video/mp4"},null,-1);function d(i,l){return o(),s("video",n,[_,t(" Your browser does not support the video tag. ")])}const u=e(a,[["render",d]]);export{u as default};
