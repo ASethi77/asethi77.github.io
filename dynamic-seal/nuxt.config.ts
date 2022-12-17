@@ -11,5 +11,8 @@ export default defineNuxtConfig({
     css: [
         '@/assets/css/main.scss',
         '@fortawesome/fontawesome-svg-core/styles.css'
-    ]
+    ],
+    router: {
+        base: '/'
+    }
 })
