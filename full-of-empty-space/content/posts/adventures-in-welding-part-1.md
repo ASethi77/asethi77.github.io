@@ -2,7 +2,7 @@
 title: Adventures in Welding - The Beginninninninning
 description: First attempts at stick welding on 304L stainless
 date: 2022-12-06
-published: true
+published: false
 tags: ['Welding']
 # cover_image: ./images/pcb.webp
 ---
