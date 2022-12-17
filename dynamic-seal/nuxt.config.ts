@@ -13,6 +13,6 @@ export default defineNuxtConfig({
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     router: {
-        base: '/'
+        base: '/asethi77.github.io/'
     }
 })
