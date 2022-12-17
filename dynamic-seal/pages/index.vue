@@ -1,4 +1,5 @@
 <template>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div class="hero w-screen h-screen flex flex-col items-center justify-center">
         <h1 class="text-cyan-900 sm:text-6xl md:text-9xl lg:text-[12rem] text-center flex-center">Dynamic Seal</h1> 
         <img alt="seal" src="/img/Seal_NoBg.svg" class="m-6 w-1/3">
