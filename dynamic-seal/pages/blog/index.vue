@@ -6,7 +6,7 @@
             <!-- <pre>
                 {{postList['data']}}
             </pre> -->
-            <div class="post min-h-24 bg-slate-100 hover:bg-slate-200 my-12 w-full rounded-lg p-6" v-for="post in postList['data']">
+            <div class="post min-h-24 bg-slate-100 hover:bg-slate-200 my-12 w-full rounded-lg p-6" v-for="post in postList">
                 <RouterLink :to="post['_path']">
                     <p>{{post['_path']}}</p>
                     <div class="flex flex-col md:flex-row justify-between" >
@@ -29,25 +29,13 @@ import { format, parseISO } from "date-fns";
             return {
                 format,
                 parseISO,
-                // postList: []
             }
         },
         async setup() {
             const postList = ref([]);
-            onMounted(async () => {
-                const res = await useAsyncData('post-list', () =>
-                    queryContent('blog')
-                    .only([
-                        'title',
-                        '_path',
-                        '_draft',
-                        'description',
-                        'date'
-                    ])
-                    .find());
-                postList.value = res;
-                console.log(res);
-            })
+            var blogPosts = await queryContent('/blog').find()
+            console.log(blogPosts);
+            postList.value = blogPosts;
 
             return {
                 postList
