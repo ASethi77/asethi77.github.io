@@ -8,14 +8,15 @@
             </pre> -->
             <div class="post min-h-24 bg-slate-100 hover:bg-slate-200 my-12 w-full rounded-lg p-6" v-for="post in postList['data']">
                 <RouterLink :to="post['_path']">
-                <div class="flex flex-col md:flex-row justify-between" >
-                    <h2 class="text-2xl text-amber-700 font-semibold">{{post['title']}}</h2>
-                    <h3 class="text-xl text-rose-800 md:text-right grow align-bottom"><font-awesome-icon class="mr-2" :icon="['fa', 'fa-calendar']" />{{format(parseISO(post['date']), 'MM/dd/yyyy')}}</h3>
-                </div>
-                <div class="mt-4 text-foreground-50">
-                    <p>{{post['description']}}</p>
-                </div>
-            </RouterLink>
+                    <p>{{post['_path']}}</p>
+                    <div class="flex flex-col md:flex-row justify-between" >
+                        <h2 class="text-2xl text-amber-700 font-semibold">{{post['title']}}</h2>
+                        <h3 class="text-xl text-rose-800 md:text-right grow align-bottom"><font-awesome-icon class="mr-2" :icon="['far', 'fa-calendar']" />{{format(parseISO(post['date']), 'MM/dd/yyyy')}}</h3>
+                    </div>
+                    <div class="mt-4 text-foreground-50">
+                        <p>{{post['description']}}</p>
+                    </div>
+                </RouterLink>
             </div>
         </div>
     </div>
@@ -27,14 +28,15 @@ import { format, parseISO } from "date-fns";
         data() {
             return {
                 format,
-                parseISO
+                parseISO,
+                // postList: []
             }
         },
         async setup() {
             const postList = ref([]);
             onMounted(async () => {
-                const res = await useAsyncData('post-list', () => {
-                    return queryContent('posts')
+                const res = await useAsyncData('post-list', () =>
+                    queryContent('blog')
                     .only([
                         'title',
                         '_path',
@@ -42,10 +44,9 @@ import { format, parseISO } from "date-fns";
                         'description',
                         'date'
                     ])
-                    .find();
-                });
-                console.log(res['data']);
+                    .find());
                 postList.value = res;
+                console.log(res);
             })
 
             return {
