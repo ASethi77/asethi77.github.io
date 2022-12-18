@@ -49,15 +49,21 @@ export default {
   },
   
   mounted() {
-    window.addEventListener('resize', () => {
-      this.windowWidth = window.innerWidth
-    })
+    window.addEventListener('resize', this.updateWindowWidth)
+  },
+  
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateWindowWidth) 
   },
 
   methods: {
     toggleMenu() {
         // if (this.isMobile()) {
             this.showMenu = !this.showMenu;
+    },
+
+    updateWindowWidth() {
+        this.windowWidth = window.innerWidth;
     }
   }
 }
