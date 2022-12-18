@@ -44,15 +44,14 @@ export default defineNuxtConfig({
     // https://github.com/nuxt/framework/issues/4919#issuecomment-1124349857 suggests
     // using a nitro hook but I still can't use `useAsyncData` outside of Nuxt
     // so I can't really query this. 
-    // hooks: {
-    //     async 'nitro:config' (nitroConfig) {
-    //         if (nitroConfig.dev) { return }
-    //         const blogRoutes = await potatoRoutes();
-    //         console.log(blogRoutes);
-    //         nitroConfig.prerender.routes.push(blogRoutes)
-    //     }
-    // },
-    generate: {
-        routes: getBlogRoutes()
-    }
+    hooks: {
+        'nitro:config' (nitroConfig) {
+            if (nitroConfig.dev) { return }
+            const blogRoutes = getBlogRoutes();
+            nitroConfig.prerender.routes.push(...blogRoutes)
+        }
+    },
+    // generate: {
+    //     routes: getBlogRoutes()
+    // }
 })
