@@ -1,7 +1,7 @@
 <template>
-<nav class="flex items-center justify-between bg-background-50 text-foreground-50 pt-6 font-heading text-3xl lg:text-4xl"
-    :class="{'flex-wrap': isMobile, 'menu-selected': menuActive }">
-  <div class="flex items-center flex-shrink-0 mx-6">
+<nav class="font-heading text-3xl lg:text-4xl text-foreground-50 bg-background-50">
+    <div class="pt-6 px-12 flex items-center justify-between text-foreground-50" :class="{'flex-wrap': isMobile, 'menu-selected': menuActive }">
+  <div class="flex items-center flex-shrink-0 mr-6">
     <button class="text-2xl lg:text-3xl mr-8 lg:mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
     <RouterLink :to="'/'"><span class="tracking-tight">Dynamic Seal</span></RouterLink>
   </div>
@@ -12,12 +12,13 @@
       </button>
     </div>
   </div>
-  <div ref="menuContainer" :class="{ 'menu-selected': menuActive,'pb-9': menuActive }" class="text-center lg:flex lg:grow lg:text-left lg:items-center lg:w-auto">
+  <div ref="menuContainer" :class="{ 'menu-selected': menuActive,'pb-9': menuActive }" class="w-full lg:text-center lg:flex lg:grow lg:text-left lg:justify-end lg:w-auto">
     <div v-for="link in linkList"
-        :class="{ hidden: (isMobile && !showMenu), 'w-screen': isMobile }"
+        :class="{ hidden: (isMobile && !showMenu) }"
     >
       <RouterLink :to="link.linkUrl" class="block mx-8 mt-4 lg:inline-block lg:mt-0 hover:text-cyan-500">{{link.linkText}}</RouterLink>
     </div>
+  </div>
   </div>
 
 </nav>
@@ -35,7 +36,7 @@
   }
 
   .router-link-active {
-    @apply underline decoration-foreground-900;
+    @apply underline decoration-foreground-50;
   }
 }
 </style>

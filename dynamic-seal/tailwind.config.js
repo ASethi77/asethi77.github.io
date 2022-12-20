@@ -15,7 +15,7 @@ module.exports = {
         },
         background: {
           50: colors.zinc[100],
-          900: colors.cyan[800]
+          900: colors.zinc[800]
         }
       },
       fontSize: {
