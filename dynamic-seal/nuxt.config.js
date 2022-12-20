@@ -54,4 +54,15 @@ export default defineNuxtConfig({
     // generate: {
     //     routes: getBlogRoutes()
     // }
+
+    // See https://github.com/nuxt/framework/discussions/3823#discussioncomment-2477885
+    build: {
+        transpile: [
+            "@fortawesome/fontawesome-svg-core",
+            "@fortawesome/free-brands-svg-icons",
+            "@fortawesome/free-regular-svg-icons",
+            "@fortawesome/free-solid-svg-icons",
+            "@fortawesome/vue-fontawesome"
+        ]
+    }
 })

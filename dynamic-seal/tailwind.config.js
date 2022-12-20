@@ -11,11 +11,11 @@ module.exports = {
       colors: {
         foreground: { 
           50: colors.cyan[800],
-          900: "#d8efdc"
+          900: "#f0f3dc"
         },
         background: {
           900: colors.cyan[800],
-          50: "#d8efdc"
+          50: "#f0f3dc"
         }
       },
       fontSize: {
