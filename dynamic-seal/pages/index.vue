@@ -1,10 +1,21 @@
 <template>
-    <div class="hero w-screen h-screen flex flex-col items-center justify-center">
-        <h1 class="text-cyan-900 text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-center flex-center">Dynamic Seal</h1> 
-        <img alt="seal" src="/img/Seal_NoBg.svg" class="m-6 max-w-[50%] md:max-w-[33%]">
-        <div class="text-cyan-900 text-2xl md:text-3xl lg:text-5xl flex flex-row items-center justify-around space-x-16">
-            <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/blog">Posts</RouterLink>
+    <div>
+        <!-- <NavBar></NavBar> -->
+        <div class="w-screen bg-zinc-100 flex flex-col md:grid md:grid-cols-[60%_40%] md:grid-rows-1 font-heading">
+            <div class="p-12 md:p-24 hero md:pb-12 min-h-[60vh] md:min-h-[80vh] w-full h-full bg-clip-text">
+                <h1 class="text-transparent
+            
+                       leading-none text-7xl lg:text-9xl xl:text-[15rem]">Dynamic <br />Seal</h1>
+                <img alt="seal" src="/img/Seal_NoEyes.svg" class="my-6 min-w-[70%] max-w-[80%]  md:max-w-[60%] md:min-w-[50%]">
+                <div class="text-cyan-800 text-4xl lg:text-6xl mt-12 flex flex-row flex-wrap ">
+                    <RouterLink class="effect-shine mr-16" to="/about">About</RouterLink>
+                    <RouterLink class="effect-shine mr-16" to="/blog">Posts</RouterLink>
+                </div>
+            </div>
+            <div class="sidebar min-h-[10vh] h-full w-full
+                    ">
+
+            </div>
         </div>
     </div>
 </template>
@@ -12,9 +23,21 @@
 <style>
 
 .hero {
-    background-image: url('/img/Splash.svg');
+    background-image: url('/img/Splash_2.svg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+.sidebar {
+    background-image: url('/img/Splash_2.svg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+a.effect-shine:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 100%;
+  animation: shine 2s;
 }
 
 </style>

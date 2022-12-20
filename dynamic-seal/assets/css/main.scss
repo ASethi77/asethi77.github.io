@@ -1,7 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Bitter&family=Teko&display=swap');
 
-* {
-    font-family: 'Aleo';
+body {
+    font-family: 'Aleo', serif;
     font-size: 100%;
-    // background-color: #d8efdc;
+    background-color: theme("colors.background.50");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Teko',sans-serif;
+}
+
+.font-heading * {
+    font-family: 'Teko',sans-serif;
 }
