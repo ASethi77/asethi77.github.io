@@ -2,7 +2,7 @@
 <nav class="flex items-center justify-between bg-background-50 text-foreground-50 pt-6 font-heading text-3xl lg:text-4xl"
     :class="{'flex-wrap': isMobile, 'menu-selected': menuActive }">
   <div class="flex items-center flex-shrink-0 mx-6">
-    <button class="text-foreground-50 mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
+    <button class="mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
     <span class="tracking-tight mr-8">Dynamic Seal</span>
   </div>
   <div class="flex flex-wrap ml-auto">
