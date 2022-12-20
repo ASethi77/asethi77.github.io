@@ -1,10 +1,9 @@
 <template>
-<nav class="flex items-center justify-between bg-background-50 text-foreground-50 pt-6 font-heading text-xl lg:text-2xl"
-    :class="{'flex-wrap': isMobile }">
+<nav class="flex items-center justify-between bg-background-50 text-foreground-50 pt-6 font-heading text-3xl lg:text-4xl"
+    :class="{'flex-wrap': isMobile, 'menu-selected': menuActive }">
   <div class="flex items-center flex-shrink-0 mx-6">
-    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+    <button class="text-foreground-50 mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
     <span class="tracking-tight mr-8">Dynamic Seal</span>
-    <button class="text-foreground-50 text-3xl" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
   </div>
   <div class="flex flex-wrap ml-auto">
     <div class="lg:hidden block pr-6" >
@@ -13,7 +12,7 @@
       </button>
     </div>
   </div>
-  <div ref="menuContainer" class="text-center lg:flex lg:grow lg:text-left lg:items-center lg:w-auto">
+  <div ref="menuContainer" :class="{ 'menu-selected': menuActive,'pb-9': menuActive }" class="text-center lg:flex lg:grow lg:text-left lg:items-center lg:w-auto">
     <div v-for="link in linkList"
         :class="{ hidden: (isMobile && !showMenu), 'w-screen': isMobile }"
     >
@@ -23,6 +22,23 @@
 
 </nav>
 </template>
+
+<style lang="scss">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-selected {
+    @apply bg-background-900;
+    @apply text-foreground-900;
+  }
+
+  .router-link-active {
+    @apply underline decoration-foreground-900;
+  }
+}
+</style>
 
 <script>
 import nightwind from "nightwind/helper"
@@ -51,6 +67,10 @@ export default {
   computed: {
     isMobile() {
         return this.windowWidth < 1024;
+    },
+
+    menuActive() {
+      return this.isMobile && this.showMenu;
     }
   },
   

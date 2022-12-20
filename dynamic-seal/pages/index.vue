@@ -8,8 +8,8 @@
                        leading-none text-7xl lg:text-9xl xl:text-[15rem]">Dynamic <br />Seal</h1>
                 <img alt="seal" src="/img/Seal_NoEyes.svg" class="my-6 min-w-[70%] max-w-[80%]  md:max-w-[60%] md:min-w-[50%]">
                 <div class="text-cyan-800 text-4xl lg:text-6xl mt-12 flex flex-row flex-wrap ">
-                    <RouterLink class="effect-shine mr-16" to="/about">About</RouterLink>
-                    <RouterLink class="effect-shine mr-16" to="/blog">Posts</RouterLink>
+                    <RouterLink class="hover:underline mr-16" to="/about">About</RouterLink>
+                    <RouterLink class="hover:underline mr-16" to="/blog">Posts</RouterLink>
                 </div>
             </div>
             <div class="sidebar min-h-[10vh] h-full w-full
@@ -22,6 +22,12 @@
 
 <style>
 
+html.dark .hero {
+    background-image: url('/img/Splash_Light.svg');
+    background-size: stretch;
+    /* background-repeat: no-repeat; */
+}
+
 .hero {
     background-image: url('/img/Splash_2.svg');
     background-size: cover;
@@ -33,6 +39,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+html.dark .sidebar {
+    background-image: url('/img/Splash_Light.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 a.effect-shine:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
