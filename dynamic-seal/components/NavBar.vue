@@ -2,8 +2,8 @@
 <nav class="flex items-center justify-between bg-background-50 text-foreground-50 pt-6 font-heading text-3xl lg:text-4xl"
     :class="{'flex-wrap': isMobile, 'menu-selected': menuActive }">
   <div class="flex items-center flex-shrink-0 mx-6">
-    <button class="mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
-    <span class="tracking-tight mr-8">Dynamic Seal</span>
+    <button class="text-2xl lg:text-3xl sm:mr-8 lg:mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
+    <RouterLink :to="'/'"><span class="tracking-tight mr-8">Dynamic Seal</span></RouterLink>
   </div>
   <div class="flex flex-wrap ml-auto">
     <div class="lg:hidden block pr-6" >
