@@ -17,6 +17,7 @@ body {
 
 html.dark body {
     background-color: theme("colors.background.900");
+    color: theme("colors.foreground.900");
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,31 +1,29 @@
 <template>
-  <div>
-    <pre>{{$route}}</pre>
-    <!-- <pre>{{params}}</pre> -->
-    <!-- <pre>{{$route}}</pre> -->
-    <!-- <h1>{{ page.title }}</h1> -->
-    <!-- <p>{{ page.description }}</p> -->
-    <ContentDoc />
+  <div class="bg-background-50 min-h-screen p-12">
+    <NavBar></NavBar>
+    <div class="font-blog-post mx-auto w-full md:w-2/3">
+      <ContentDoc v-slot="{ doc }" class="">
+          <h1 class="my-12 xl:mt-24 xl:mb-16 text-4xl xl:text-6xl text-red-500 font-semibold font-heading">{{  doc.title  }}</h1>
+          <ContentRenderer :value="doc"></ContentRenderer>
+      </ContentDoc>
+    </div>
   </div>
 </template>
 
-<script>
-export default {  
-  async asyncData({ $content, params, error }) {
-    console.log("entered asyncData");
-    console.log($content);
-    console.log(params);
-    const slug = params.slug || "index";
-    const page = await $content(slug)
-      .fetch()
-      .catch(err => {
-        error({ statusCode: 404, message: "Page not found" });
-      });
+<style lang="scss">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    return {
-      page,
-      params
-    };
+@layer components {
+  .blog-post {
+    @apply bg-background-50;
+    @apply text-foreground-50;
   }
-};
+}
+</style>
+
+<script>
+export default defineNuxtComponent({
+});
 </script>

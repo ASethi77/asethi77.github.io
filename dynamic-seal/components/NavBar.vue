@@ -1,5 +1,5 @@
 <template>
-<nav class="font-heading text-3xl lg:text-4xl text-foreground-50 bg-background-50">
+<nav class="font-heading text-3xl lg:text-4xl text-foreground-50 bg-background-50 mb-12">
     <div class="pt-6 px-12 flex items-center justify-between text-foreground-50" :class="{'flex-wrap': isMobile, 'menu-selected': menuActive }">
   <div class="flex items-center flex-shrink-0 mr-6">
     <button class="text-2xl lg:text-3xl mr-8 lg:mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>

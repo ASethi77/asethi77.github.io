@@ -25,7 +25,11 @@ export default defineNuxtConfig({
     ],
     content: {
         // https://content.nuxtjs.org/api/configuration
-        documentDriven: false
+        documentDriven: false,
+        highlight: {
+            // Theme used in all color schemes.
+            theme: 'github-dark'
+          }
     },
     css: [
         '@/assets/css/main.scss',

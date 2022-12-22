@@ -57,31 +57,3 @@ import { format, parseISO } from "date-fns";
         }
 }
 </script>
-
-<!-- <script>
-    export default {
-        data() {
-            return {
-                postList: []
-            }
-        },
-
-        async mounted() {
-            this.postList = await queryContent('/posts').find();
-        },
-//         async asyncData({ $content, params, error }) {
-//             // const slug = params.slug || "index";
-//             const page = await $content('posts')
-//             .fetch()
-//             .catch(err => {
-//                 error({ statusCode: 404, message: "Page not found" });
-//             });
-
-//             this.postList = page;
-//             console.log(page);
-//             return {
-//                 page
-//             };
-//   }
-    }
-</script> -->
