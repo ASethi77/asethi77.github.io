@@ -28,8 +28,21 @@ export default defineNuxtConfig({
         documentDriven: false,
         highlight: {
             // Theme used in all color schemes.
-            theme: 'github-dark'
-          }
+            theme: {
+                default: 'one-dark-pro',
+                dark: 'github-dark'
+            },
+
+            preload: [
+                'c',
+                'cpp',
+                'asm',
+                'javascript',
+                'python',
+                'bash',
+                'rust'
+            ]
+        }
     },
     css: [
         '@/assets/css/main.scss',

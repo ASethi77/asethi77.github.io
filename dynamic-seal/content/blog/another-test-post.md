@@ -224,10 +224,11 @@ This is a normal paragraph:
     This is a code block.
 
 Here is an example of AppleScript:
-
+```javascript
     tell application "Foo"
         beep
     end tell
+```
 
 A code block continues until it reaches a line that is not indented
 (or the end of the article).
