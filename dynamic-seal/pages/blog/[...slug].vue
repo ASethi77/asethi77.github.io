@@ -24,15 +24,32 @@
   }
 
   #post-content {
+
     p, li, ul, ol {
       @apply text-foreground-50; 
-      @apply text-2xl;
+      @apply text-xl;
+      @screen lg {
+        @apply text-2xl;
+      }
       @apply font-medium;
     }
 
     ul, ol {
       @apply mb-7;
       @apply ml-6;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    li {
+      @apply ml-3;
+      @apply pl-3;
     }
 
     p {
