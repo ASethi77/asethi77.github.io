@@ -25,7 +25,7 @@
 
   #post-content {
 
-    p, li, ul, ol {
+    p, li, ul, ol, td, tr, th {
       @apply text-foreground-50; 
       @apply text-xl;
       @apply font-medium;
@@ -86,6 +86,63 @@
       @apply border-solid;
       @apply border-l-4;
     }
+
+         hr::before {
+          display: table;
+          content: "";
+        }
+    
+         hr::after {
+          display: table;
+          clear: both;
+          content: "";
+        }
+
+        table {
+          @apply shadow-[background-neutral-800];
+          @apply shadow-xl;
+          @apply p-6;
+          @apply rounded-lg;
+          @apply bg-neutral-100;
+          border-spacing: 0;
+          border-collapse: collapse;
+          display: block;
+          width: max-content;
+          max-width: 100%;
+          overflow: auto;
+          // box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          margin: 25px 0;
+
+          thead {
+            @apply border-solid;
+            @apply border-b;
+            @apply border-sky-700;
+            width: 80%;
+            // border-bottom: theme('text.foreground.50') 2px solid;
+          }
+
+          tbody {
+            tr:first-child td {
+              @apply pt-6;
+            }
+          }
+
+          td, th {
+            padding-right: 2rem;
+          }
+
+          td {
+            @apply py-2;
+          }
+
+            td:nth-child(1) {
+              padding-left: 2rem;
+            }
+          // }
+        }
+    
+
+
   }
 }
 </style>
