@@ -99,19 +99,19 @@
         }
 
         table {
+          @apply table-auto;
           @apply shadow-[background-neutral-800];
           @apply shadow-xl;
           @apply p-6;
           @apply rounded-lg;
           @apply bg-neutral-100;
-          border-spacing: 0;
-          border-collapse: collapse;
-          display: block;
-          width: max-content;
-          max-width: 100%;
-          overflow: auto;
-          // box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-          margin: 25px 0;
+          // border-spacing: 0;
+          // border-collapse: collapse;
+          // display: block;
+          // width: max-content;
+          // max-width: 100%;
+          // overflow: auto;
+          // // box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
           thead {
             @apply border-solid;
