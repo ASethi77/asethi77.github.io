@@ -28,10 +28,10 @@
     p, li, ul, ol {
       @apply text-foreground-50; 
       @apply text-xl;
+      @apply font-medium;
       @screen lg {
         @apply text-2xl;
       }
-      @apply font-medium;
     }
 
     ul, ol {
