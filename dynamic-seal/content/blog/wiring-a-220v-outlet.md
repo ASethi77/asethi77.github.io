@@ -97,12 +97,15 @@ Here's a particularly good example of what that might look like, straight from t
 
 ![load calc example](/img/Load_Calc_Example.png)
 
+**NOTE: There are two ways to do load calcs: via the Standard Method or the Optional Method. Do not use the Optional Method if your home's feeder is <= 100 A.**
+
 And some other links I found helpful as I worked through those calculations, mostly walking through example homes:
 
-1. https://www.youtube.com/watch?v=Nb5c552cBms
-2. https://sydneynorthshoreelectrician.com.au/electrical-service-panel-how-to-calculate-electrical-load-capacity/#:~:text=Take%20the%20breaker%27s%20size%20and,20%20amps%20x%20120%20volts).
-3. https://building.saccounty.gov/Public%20Documents/EC-03%20Single%20Family%20Dwelling%20Electrical%20Load%20Calculation%20Optional%20Method.pdf
-4. https://cms7files1.revize.com/sparksnv/electrical%20load%20calculation%20form.pdf
+1. [Walkthrough of the Optional Method for load calcs (youtube)](https://www.youtube.com/watch?v=Nb5c552cBms)
+2. [Determining load capacity for a branch circuit](https://sydneynorthshoreelectrician.com.au/electrical-service-panel-how-to-calculate-electrical-load-capacity/#:~:text=Take%20the%20breaker%27s%20size%20and,20%20amps%20x%20120%20volts)
+3. [Example of the Optional Method for load calcs](https://building.saccounty.gov/Public%20Documents/EC-03%20Single%20Family%20Dwelling%20Electrical%20Load%20Calculation%20Optional%20Method.pdf)
+4. [Yet another load calc example](https://cms7files1.revize.com/sparksnv/electrical%20load%20calculation%20form.pdf)
+5. [WA Homeowner's Residential Electrical Inspection Guidelines](https://lni.wa.gov/licensing-permits/_docs/residentialchecklist.pdf)
 
 It should go without saying... but keep in mind that none of these are substitutes for analyzing your own breakers and appliances. For example, a lot of these walkthroughs a minimum number of
 small-appliance circuits or a derating factor of 75% based on a set number of kitchen appliances, but these are sourced from derating levels in the NEC code which may not necessarily apply
@@ -110,8 +113,8 @@ if you have more small appliance circuits or fewer kitchen appliances. What I fo
 then reading them myself in the NEC guidelines and comparing that against my breaker setup to ensure I was using the correct rules and demand factors. From there cross-checking against the examples
 in NEC Annex D (see the image earlier) helped me sanity-check that I was accounting for all of my circuits correctly.
 
-After working through that process, I found that my baseline service load is 98 A -- well below the 200 A service input I already have. Even after factoring in a dedicated welder pulling wayyy
-more current than what my welder actually would sink, my service current comes up to 118 A which gives me plenty of margin. All of this is to say that with a 200 A supply I have high confidence
+After working through that process, I found that my baseline service load is 122 A -- well below the 200 A service input I already have. Even after factoring in a dedicated welder pulling wayyy
+more current than what my welder actually would sink, my service current comes up to 172 A which gives me plenty of margin. All of this is to say that with a 200 A supply I have high confidence
 that I can run a 50A welder circuit on top of what I already have. If you have e.g. a 100 or 150 A service, I'd probably recommend hiring an electrician to get 200 A service to ensure your house
 can accommodate the extra load with room to spare.
 
