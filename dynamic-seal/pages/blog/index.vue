@@ -5,7 +5,7 @@
             <div class="mx-auto w-full md:w-2/3">
                 <h1 class="font-heading text-6xl lg:text-7xl text-foreground-50 mt-24 mb-12">Posts</h1>
                 <div class="post min-h-24 my-12 w-full rounded-lg" v-for="post in postList">
-                    <RouterLink :to="post['_path']">
+                    <RouterLink v-if="post['published']" :to="post['_path']">
                         <div class="flex flex-col leading-[4rem] md:flex-row justify-between items-start" >
                             <h2 class="inline my-auto text-4xl text-red-500 font-semibold">
                                 <span class="leading-none align-bottom ">
@@ -42,8 +42,13 @@ import { format, parseISO } from "date-fns";
             const postList = ref([]);
             var blogPosts = await queryContent('/blog').find()
             blogPosts.forEach(function(post) {
-                post['date'] = format(parseISO(post['date']), 'MM/dd/yyyy');
+                let isoDate = parseISO(post['date']);
+                post["isoDate"] = isoDate;
+                post['date'] = format(isoDate, 'MM/dd/yyyy');
             });
+            blogPosts.sort(function(d1, d2) {
+                return d2['isoDate'] - d1["isoDate"];
+            })
             postList.value = blogPosts;
 
             return {

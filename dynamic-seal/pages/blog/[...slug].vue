@@ -27,10 +27,20 @@
 
     p, li, ul, ol, td, tr, th {
       @apply text-foreground-50; 
-      @apply text-xl;
       @apply font-medium;
+    }
+
+    p, li, ul, ol {
+      @apply text-xl;
       @screen lg {
         @apply text-2xl;
+      }
+    }
+
+    td, tr, th {
+      @apply text-lg;
+      @screen lg {
+        @apply text-xl;
       }
     }
 
@@ -94,12 +104,15 @@
     }
 
         table {
+          display: block;
+          max-width: fit-content;
+          margin: 0 auto;
           @apply border-collapse;
           @apply overflow-auto;
           @apply table-auto;
+          @apply drop-shadow-lg;
           @apply shadow-[background-neutral-800];
-          @apply shadow-xl;
-          @apply p-6;
+          // @apply shadow-xl;
           @apply rounded-lg;
           @apply bg-neutral-100;
 
