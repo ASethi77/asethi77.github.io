@@ -3,7 +3,7 @@
     <div class="pt-6 px-12 flex items-center justify-between text-foreground-50" :class="{'flex-wrap': isMobile, 'menu-selected': menuActive }">
   <div class="flex items-center flex-shrink-0 mr-6">
     <button class="text-2xl lg:text-3xl mr-8 lg:mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
-    <RouterLink :to="'/'"><span class="tracking-tight">Dynamic Seal</span></RouterLink>
+    <RouterLink :to="'/'"><span class="tracking-tight" :class="{ '!text-foreground-900': menuActive }">Dynamic Seal</span></RouterLink>
   </div>
   <div class="flex flex-wrap ml-auto">
     <div class="lg:hidden block pr-6" >
