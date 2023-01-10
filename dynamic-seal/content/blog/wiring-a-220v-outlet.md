@@ -128,3 +128,24 @@ on ampacity charts to be particularly useful because it also covers the thermal 
 60 degrees C, which it'll hit with a continuous current of 55A. Safe for a welder, but for example if someone 20 years from now thought they were being smart and wanted to use this outlet to charge
 an electric car, they'd probably melt the wires. On the other hand, the chart shows that THHN wire can withstand temps up to 90 deg C, which it'll hit with a continuous current of 75 A.
 I'd much rather get a bit more expensive wiring to make sure I have that thermal margin, especially since welding is all about drawing high continous current.
+
+Turns out gauge isn't dependent on whether the conductors are stranded or solid at all, the current rating is the same.
+
+I'm gonna use 6/2 romex (2 hots, 1 ground). 
+
+### Selecting a plug
+
+I'm gonna use a NEMA 6-50R, since my plug is NEMA 6-50 and I can't imagine having a need for the 120V. I don't wanna spend an extra 50 bucks on adapters for my welder.
+
+1. https://www.homedepot.com/p/Leviton-50-Amp-Double-Pole-Single-Outlet-Black-R20-05378-P00/311373590
+2. https://www.homedepot.com/p/Leviton-50-Amp-2-Pole-Flush-Mount-Shallow-Single-Outlet-Black-NEMA-6-50R-R10-05374-S00/300324220
+
+### Selecting a breaker
+
+I'm gonna use a 50 amp non-GFCI breaker.
+
+https://www.homedepot.com/p/Square-D-Homeline-50-Amp-2-Pole-Circuit-Breaker-HOM250CP-HOM250CP/202353323
+
+### Selecting conduit
+
+I'll see what home depot has but 1" EMT should be plenty.
