@@ -31,8 +31,11 @@
     }
 
     p, li, ul, ol {
-      @apply text-xl;
+      @apply text-lg;
       @screen lg {
+        @apply text-xl;
+      }
+      @screen xl {
         @apply text-2xl;
       }
     }
@@ -41,6 +44,9 @@
       @apply text-lg;
       @screen lg {
         @apply text-xl;
+      }
+      @screen xl {
+        @apply text-2xl;
       }
     }
 

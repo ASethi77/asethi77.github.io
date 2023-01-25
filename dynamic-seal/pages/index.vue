@@ -1,13 +1,11 @@
 <template>
     <div>
-        <!-- <NavBar></NavBar> -->
-        <div class="w-screen bg-zinc-100 flex flex-col md:grid md:grid-cols-[60%_40%] md:grid-rows-1 font-heading">
-            <div class="p-12 md:p-24 hero md:pb-12 min-h-[60vh] md:min-h-[80vh] w-full h-full bg-clip-text">
-                <h1 class="text-transparent
-            
-                       leading-none text-7xl lg:text-9xl xl:text-[15rem]">Dynamic <br />Seal</h1>
-                <img alt="seal" src="/img/Seal_NoEyes.svg" class="my-6 min-w-[70%] max-w-[80%]  md:max-w-[60%] md:min-w-[50%]">
-                <div class="text-cyan-800 text-4xl lg:text-6xl mt-12 flex flex-row flex-wrap ">
+        <NavBar></NavBar>
+        <div class="mx-auto w-[67vw] bg-zinc-100 flex flex-col md:grid md:grid-cols-[80%_20%] lg:grid-cols-[60%_40%] md:grid-rows-1 font-heading">
+            <div class="align-middle p-12 md:pr-24 md:pl-12 hero min-h-[60vh] md:min-h-[80vh] w-full h-full">
+                <!-- <h1 class="font-teko text-foreground-50 leading-none text-4xl lg:text-6xl xl:text-7xl">Dynamic <br />Seal</h1> -->
+                <img alt="seal" src="/img/Seal_NoEyes.svg" class="my-6 min-w-[70%] max-w-[90%]">
+                <div class="mt-24 text-cyan-800 text-4xl md:text-5xl xl:text-6xl flex flex-row flex-wrap ">
                     <RouterLink class="hover:underline mr-16" to="/about">About</RouterLink>
                     <RouterLink class="hover:underline mr-16" to="/blog">Posts</RouterLink>
                 </div>
@@ -21,18 +19,6 @@
 </template>
 
 <style>
-
-html.dark .hero {
-    background-image: url('/img/Splash_Light.svg');
-    background-size: stretch;
-    /* background-repeat: no-repeat; */
-}
-
-.hero {
-    background-image: url('/img/Splash_2.svg');
-    background-size: cover;
-    /* background-repeat: no-repeat; */
-}
 
 .sidebar {
     background-image: url('/img/Splash_2.svg');

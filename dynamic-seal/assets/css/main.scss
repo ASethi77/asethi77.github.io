@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Barlow&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Barlow&family=Teko&family=Inter&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .font-heading, .font-heading * {
+    font-family: 'Teko', sans-serif;
+}
+
+.font-teko, .font-teko * {
     font-family: 'Teko', sans-serif;
 }
 
