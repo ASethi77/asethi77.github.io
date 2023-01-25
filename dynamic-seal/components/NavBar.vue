@@ -1,5 +1,5 @@
 <template>
-<nav class="font-teko px-24 text-3xl lg:text-4xl pb-12" :class="{ 'menu-selected': menuActive }">
+<nav class="font-teko md:px-24 text-3xl lg:text-4xl pb-12" :class="{ 'menu-selected': menuActive }">
     <div class="pt-6 px-12 flex items-center justify-between text-foreground-50" :class="{'flex-wrap': isMobile }">
   <div class="flex items-center flex-shrink-0 mr-6">
     <button class="text-2xl lg:text-3xl mr-8 lg:mr-12" :class="{ '!text-foreground-900': menuActive }" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
@@ -8,7 +8,7 @@
   <div class="flex flex-wrap ml-auto">
     <div class="lg:hidden block pr-6" >
       <button @click=toggleMenu() class="flex items-center px-3 py-2 border rounded border-cyan-400 hover:text-cyan-500 hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        <svg class="fg-foreground-50 h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
       </button>
     </div>
   </div>
