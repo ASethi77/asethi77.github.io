@@ -116,18 +116,14 @@
           @apply border-collapse;
           @apply overflow-auto;
           @apply table-auto;
-          @apply drop-shadow-lg;
-          @apply shadow-[background-neutral-800];
-          // @apply shadow-xl;
-          @apply rounded-lg;
-          @apply bg-neutral-100;
+          @apply bg-background-50;
 
           thead {
             @apply rounded-lg;
-            @apply bg-neutral-200;
+            @apply bg-gray-800;
             @apply border-solid;
-            @apply border-b;
-            @apply border-sky-700;
+            @apply border-b-2;
+            @apply border-orange-200;
 
             th {
               @apply font-semibold;

@@ -10,11 +10,11 @@ module.exports = {
       // See https://github.com/jjranalli/nightwind#configuration
       colors: {
         foreground: { 
-          50: colors.cyan[800],
+          50: colors.slate[200],
           900: colors.zinc[100]
         },
         background: {
-          50: colors.zinc[100],
+          50: colors.gray[900],
           900: colors.zinc[800]
         }
       },
