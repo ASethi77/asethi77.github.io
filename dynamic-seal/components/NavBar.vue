@@ -14,9 +14,9 @@
   </div>
   <div id="nav-menu" ref="menuContainer" :class="{ 'menu-selected': menuActive,'pb-9': menuActive }" class="w-full lg:text-center lg:flex lg:grow lg:text-left lg:justify-end lg:w-auto">
     <div v-for="link in linkList"
-        :class="{ hidden: (isMobile && !showMenu) }"
+        :class="{ hidden: ((isMobile && !showMenu) || (!isMobile && hideAllNavLinks)) }"
     >
-      <RouterLink :to="link.linkUrl" class="block mx-2 mt-4 px-10 lg:inline-block lg:mt-0 underline border-2 rounded border-transparent">{{link.linkText}}</RouterLink>
+      <RouterLink :to="link.linkUrl" class="block mx-2 mt-4 px-10 lg:inline-block lg:mt-0 bg-foreground-50 text-foreground-900 border-2 border-transparent">{{link.linkText}}</RouterLink>
     </div>
   </div>
   </div>
@@ -49,6 +49,8 @@
 
   #nav-menu a:hover {
     @apply border-foreground-50;
+    @apply bg-background-50;
+    @apply text-foreground-50;
   }
 }
 </style>
@@ -57,6 +59,12 @@
 import nightwind from "nightwind/helper"
 
 export default {
+  props: {
+    hideAllNavLinks: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       nightwind,

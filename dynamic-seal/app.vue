@@ -13,5 +13,10 @@ useHead({
     // said useHead() in app.vue was a new recommended interface and it seems to work ¯\_(ツ)_/¯
     { name: 'theme-color', content: '#111827' }
   ],
+  script: [
+    {
+     innerHTML: 'nightwind.init();'
+    }
+  ]
 })
 </script>

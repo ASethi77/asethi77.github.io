@@ -1,20 +1,16 @@
 <template>
     <div>
-        <NavBar></NavBar>
-        <div class="mx-auto w-[67vw] md:grid md:grid-cols-[80%_20%] lg:grid-cols-[60%_40%] md:grid-rows-1">
-            <div class="py-auto p-6 md:pr-24 md:pl-12 hero min-h-[60vh] md:min-h-[80vh] w-full h-full flex items-center justify-center">
-                <div id="hero-wrap">
-                    <img alt="seal" src="/img/Seal_NoEyes.svg" class="my-6 min-w-[70%] max-w-[90%]">
-                    <div class="mt-24 text-4xl md:text-5xl xl:text-6xl flex flex-row flex-wrap justify-center">
-                        <RouterLink class="px-5 mx-auto text-center" to="/about">About</RouterLink>
-                        <RouterLink class="px-5 mx-auto text-center" to="/blog">Posts</RouterLink>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar min-h-[10vh] h-full w-full
-                    ">
-
-            </div>
+        <NavBar :hide-all-nav-links="true"></NavBar>
+        <div class="mx-auto w-[80vw] max-lg:flex max-lg:flex-col-reverse lg:relative lg:h-[80vh]">
+            <div class=" retrobar bg-cyan-900 lg:h-full lg:w-full"/>
+            <div class=" retrobar bg-sky-700 lg:h-4/5 lg:w-4/5"/>
+            <div class=" retrobar bg-orange-100 lg:h-3/5 lg:w-3/5"/>
+            <RouterLink tag="div" to="/blog" class="linkitem retrobar bg-amber-200 lg:h-2/5 lg:w-2/5">
+                <p class="px-6 pb-[1.5rem] lg:text-3xl lg:text-left lg:flex-initial max-lg:mb-auto mt-auto" to="/posts">Posts</p>
+            </RouterLink>
+            <RouterLink tag="div" to="/about" class="linkitem retrobar bg-red-400 lg:h-1/5 lg:w-1/5">
+                <p class="px-6 pb-[1.5rem] lg:text-3xl lg:text-left lg:flex-initial max-lg:mb-auto mt-auto" to="/about">About</p>
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -41,6 +37,40 @@ html.dark .sidebar {
     @apply underline; 
     @apply underline-offset-8; 
     @apply decoration-[3px];
+}
+
+.retrobar {
+    @apply mx-auto;
+    @apply max-lg:text-3xl;
+    @apply max-lg:block;
+    @apply max-lg:h-24;
+    @apply max-lg:w-full;
+    @apply text-center;
+    @screen lg {
+        @apply absolute;
+
+        &:not(:first-child) {
+            @apply rounded-br-[150px];
+        }
+    }
+}
+
+.linkitem {
+    transition: all 300ms ease;
+    @apply flex;
+    @apply max-lg:justify-center;
+    @screen lg {
+        @apply justify-start;
+        @apply items-end;
+    }
+}
+
+.linkitem:hover {
+    @screen lg {
+    @apply h-full;
+    @apply w-full;
+    @apply rounded-none;
+    }
 }
 
 </style>

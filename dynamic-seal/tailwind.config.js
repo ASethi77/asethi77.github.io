@@ -6,16 +6,28 @@ module.exports = {
 
   content: [],
   theme: {
+    nightwind: {
+      transitionDuration: "750ms", // default '300ms'
+    },
+
     extend: {
       // See https://github.com/jjranalli/nightwind#configuration
       colors: {
         foreground: { 
-          50: colors.slate[200],
-          900: colors.zinc[100]
+          50: colors.stone[700],
+          900: colors.slate[200]
         },
         background: {
-          50: colors.gray[900],
-          900: colors.zinc[800]
+          50: colors.zinc[50],
+          900: colors.slate[900]
+        },
+        "accent-bluegreen": {
+          50: "#417b7d",
+          900: "#95b3a3"
+        },
+        "theme-darkblue": {
+          50: "#1c243a",
+          900: "#1c243a"
         }
       },
       fontSize: {
