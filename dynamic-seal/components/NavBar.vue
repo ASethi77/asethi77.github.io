@@ -16,7 +16,7 @@
     <div v-for="link in linkList"
         :class="{ hidden: ((isMobile && !showMenu) || (!isMobile && hideAllNavLinks)) }"
     >
-      <RouterLink :to="link.linkUrl" class="block mx-2 mt-4 px-10 lg:inline-block lg:mt-0 bg-foreground-50 text-foreground-900 border-2 border-transparent">{{link.linkText}}</RouterLink>
+      <RouterLink :to="link.linkUrl" class="block md:text-2xl mx-2 mt-4 px-10 lg:inline-block lg:mt-0 bg-foreground-50 text-foreground-900 border-2 border-transparent">{{link.linkText}}</RouterLink>
     </div>
   </div>
   </div>
