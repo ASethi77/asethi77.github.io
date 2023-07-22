@@ -6,7 +6,7 @@
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare",
-    "deploy": "touch ./.output/public/.nojekyll; echo 'dynamicseal.dev' > CNAME && push-dir --dir=.output/public --branch=master --cleanup",
+    "deploy": "touch ./.output/public/.nojekyll; cp CNAME ./.output/public && push-dir --dir=.output/public --branch=master --cleanup",
     "publish": "npm run generate && npm run deploy"
   },
   "devDependencies": {
