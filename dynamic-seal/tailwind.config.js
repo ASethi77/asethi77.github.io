@@ -28,6 +28,10 @@ module.exports = {
         "theme-darkblue": {
           50: "#1c243a",
           900: "#1c243a"
+        },
+        "accent-lightorange": {
+          50: colors.orange[50],
+          900: colors.orange[700]
         }
       },
       fontSize: {
