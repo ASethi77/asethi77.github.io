@@ -128,6 +128,7 @@
       display: block;
       max-width: fit-content;
       margin: 0 auto;
+      @apply shadow-sm;
       @apply border-collapse;
       @apply overflow-auto;
       @apply table-auto;
@@ -148,6 +149,12 @@
       tbody {
         tr:first-child td {
           @apply pt-6;
+        }
+
+        tr:not(:last-child) {
+          @apply border-solid;
+          @apply border-b-2;
+          @apply border-neutral-300;
         }
       }
 
