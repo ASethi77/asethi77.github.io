@@ -14,12 +14,12 @@ module.exports = {
       // See https://github.com/jjranalli/nightwind#configuration
       colors: {
         foreground: { 
-          50: colors.stone[700],
-          900: colors.slate[200]
+          50: colors.neutral[700],
+          900: colors.neutral[200]
         },
         background: {
-          50: colors.zinc[50],
-          900: colors.slate[900]
+          50: colors.neutral[50],
+          900: colors.neutral[900]
         },
         "accent-bluegreen": {
           50: "#417b7d",

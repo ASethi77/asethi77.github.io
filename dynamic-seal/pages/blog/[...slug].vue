@@ -1,11 +1,11 @@
 <template>
   <div class="bg-background-50 min-h-screen">
     <NavBar></NavBar>
-    <div class="font-blog-post mx-auto w-full md:w-2/3 p-12">
+    <div class="font-blog-post mx-auto w-full">
       <ContentDoc v-slot="{ doc }" class="">
-          <h1 class="my-12 xl:mt-24 xl:mb-16 text-4xl xl:text-6xl text-red-500 font-semibold font-heading">{{  doc.title  }}</h1>
+          <h1 id="post-title" class="my-12 xl:mt-24 xl:mb-16 text-3xl xl:text-4xl text-red-500 font-semibold font-heading">{{  doc.title  }}</h1>
           <div id="post-content">
-            <ContentRenderer class="lg:w-2/3" :value="doc"></ContentRenderer>
+            <ContentRenderer class="" :value="doc"></ContentRenderer>
           </div>
         </ContentDoc>
     </div>
@@ -23,30 +23,45 @@
     @apply text-foreground-50;
   }
 
+  #post-content, #post-title {
+    @apply w-2/3;
+    @screen lg {
+      @apply w-1/2;
+    }
+
+    @apply mx-auto;
+  }
+
   #post-content {
+    // Stole this from https://css-tricks.com/full-width-containers-limited-width-parents/#aa-no-calc-needed
+    .section-highlight {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      @apply bg-neutral-900;
+      @apply py-5;
+      @apply my-5;
+    }
+
+    .section-highlight > * {
+      @apply mx-auto;
+    }
 
     p, li, ul, ol, td, tr, th {
       @apply text-foreground-50; 
       @apply font-medium;
     }
 
-    p, li, ul, ol {
-      @apply text-lg;
+    p, li, ul, ol, td, tr, th {
+      @apply text-base;
       @screen lg {
-        @apply text-xl;
+        @apply text-base;
       }
       @screen xl {
-        @apply text-2xl;
-      }
-    }
-
-    td, tr, th {
-      @apply text-lg;
-      @screen lg {
         @apply text-xl;
-      }
-      @screen xl {
-        @apply text-2xl;
       }
     }
 
@@ -81,7 +96,7 @@
     h1,h2,h3,h4,h5,h6 {
       @apply my-4;
       // @apply pl-3;
-      @apply text-rose-700;
+      @apply text-red-600;
       @apply decoration-solid;
       @apply hover:underline;
       // @apply bg-foreground-50;
@@ -120,10 +135,10 @@
 
       thead {
         @apply rounded-lg;
-        @apply bg-gray-800;
+        // @apply bg-gray-800;
         @apply border-solid;
         @apply border-b-2;
-        @apply border-sky-200;
+        // @apply border-sky-200;
 
         th {
           @apply font-semibold;
@@ -163,6 +178,10 @@
       margin-bottom: 2rem;
     }
 
+    // See https://stackoverflow.com/questions/1132366/selector-for-one-tag-directly-followed-by-another-tag
+    p:has(+ img), p:has(+ .section-highlight) {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

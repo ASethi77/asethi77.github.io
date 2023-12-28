@@ -10,7 +10,9 @@ published: true
 I started learning how to weld as a hobby recently which has been... an experience. My first beads
 looked like garbage:
 
-<img src="/img/terrible_welds.jpg" width="400" alt="My first welds using stick on sheet metal... lol"/>
+<div class="section-highlight">
+<img src="/img/terrible_welds.jpg" width="300" alt="My first welds using stick on sheet metal... lol"/>
+</div>
 
 A lot of this is still just user error, but let's just say that considering I'm:
 
@@ -58,7 +60,9 @@ additional load from my welder to determine whether my panel could support the e
 I measured the diameter of the conduit (the metal tube)
 feeding wire from my utility's power meter box into my main breaker panel; in my case, it was about 3 inches.
 
+<div class="section-highlight">
 <img src="/img/exterior_electrical_panel_conduit.jpg" width="400" alt="Exterior house conduit measurement"/>
+</div>
 
 While it's possible that the utility could run thin-gauge wire inside such a large conduit, it's unlikely that
 they would do so. WAC 296-46B-230 §028 specifies that for 100 amp or less service (#3 AWG copper),
