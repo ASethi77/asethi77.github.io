@@ -24,7 +24,7 @@
   }
 
   #post-content, #post-title {
-    @apply w-2/3;
+    @apply w-[80vw];
     @screen lg {
       @apply w-1/2;
     }
