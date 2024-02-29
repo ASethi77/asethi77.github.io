@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar :hide-all-nav-links="true"></NavBar>
-        <div class="mx-auto w-[80vw] max-lg:flex max-lg:flex-col-reverse lg:relative lg:h-[80vh]">
+        <div id="main-links" class="mx-auto w-[80vw] max-lg:flex max-lg:flex-col-reverse lg:relative lg:h-[80vh]">
             <div class=" retrobar bg-cyan-900 lg:h-full lg:w-full"/>
             <div class=" retrobar bg-sky-700 lg:h-4/5 lg:w-4/5"/>
             <div class=" retrobar bg-orange-100 lg:h-3/5 lg:w-3/5"/>
@@ -16,6 +16,14 @@
 </template>
 
 <style>
+
+#main-links .retrobar:first-child {
+    @apply rounded-b-lg;
+}
+
+#main-links .retrobar:last-child {
+    @apply rounded-t-lg;
+}
 
 .sidebar {
     background-image: url('/img/Splash_2.svg');
