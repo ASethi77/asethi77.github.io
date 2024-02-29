@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar></NavBar>
-        <div class="bg-background-50 min-h-screen p-12">
+        <div class="bg-background-50 min-h-screen p-[10vw]">
             <div class="mx-auto w-full lg:w-1/2">
                 <h1 class="font-heading text-4xl lg:text-6xl text-foreground-50 mt-24 mb-12">Posts</h1>
                 <div class="post min-h-24 my-12 w-full rounded-lg" v-for="post in postList">

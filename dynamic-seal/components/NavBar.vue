@@ -1,12 +1,12 @@
 <template>
-<nav class="md:px-24 text-2xl lg:text-3xl pb-12" :class="{ 'menu-selected': menuActive }">
-    <div class="pt-6 px-12 flex items-center justify-between" :class="{'flex-wrap': isMobile }">
-  <div class="flex items-center flex-shrink-0 mr-6">
-    <button class="hidden text-2xl lg:text-3xl mr-8 lg:mr-12" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
+<nav class="px-[10vw] text-2xl lg:text-3xl pb-12" :class="{ 'menu-selected': menuActive }">
+    <div class="pt-6 flex items-center justify-between" :class="{'flex-wrap': isMobile }">
+  <div class="flex items-center flex-shrink-0">
+    <button class="hidden text-2xl lg:text-3xl" type="button" @click=nightwind.toggle()><font-awesome-icon icon="far fa-moon" /></button>
     <RouterLink :to="'/'"><span class="tracking-tight">Dynamic Seal</span></RouterLink>
   </div>
   <div class="flex flex-wrap ml-auto">
-    <div class="lg:hidden block pr-6" >
+    <div class="lg:hidden block" >
       <button id="menu-toggle" @click=toggleMenu() class="flex items-center px-3 py-2 border-2 border-transparent rounded hover:border-foreground-50">
         <svg :class="{ 'menu-selected': menuActive }" class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
       </button>
