@@ -51,6 +51,7 @@
     }
 
     p, li, ul, ol, td, tr, th {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'IBM Plex Sans', sans-serif;
       @apply text-foreground-50; 
       @apply font-medium;
     }
@@ -59,9 +60,6 @@
       @apply text-base;
       @screen lg {
         @apply text-base;
-      }
-      @screen xl {
-        @apply text-xl;
       }
     }
 
@@ -103,19 +101,31 @@
     }
 
     h1 {
-      @apply text-5xl;
-    }
-
-    h2 {
-      @apply text-4xl;
-    }
-
-    h3 {
       @apply text-3xl;
     }
 
+    h2 {
+      @apply text-2xl;
+    }
+
+    h3 {
+      @apply text-xl;
+    }
+
     h4, h5, h6 {
-      @apply text-2xl
+      @apply text-xl;
+    }
+
+    h4 {
+      @apply text-neutral-500;
+    }
+
+    h5 {
+      @apply text-neutral-400;
+    }
+
+    h6 {
+      @apply text-neutral-300;
     }
 
     blockquote {
