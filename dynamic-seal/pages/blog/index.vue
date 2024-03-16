@@ -3,7 +3,7 @@
         <NavBar></NavBar>
         <div class="bg-background-50 min-h-screen p-[10vw]">
             <div class="mx-auto w-full lg:w-1/2">
-                <h1 class="font-heading text-4xl lg:text-6xl text-foreground-50 mt-24 mb-12">Posts</h1>
+                <h1 class="font-heading text-4xl lg:text-6xl text-foreground-50 mt-12 mb-12">Posts</h1>
                 <div class="post min-h-24 my-12 w-full rounded-lg" v-for="post in postList">
                     <RouterLink v-if="post['published']" :to="post['_path']">
                         <div class="flex flex-col leading-[4rem] md:flex-row justify-between items-start" >
@@ -20,7 +20,7 @@
                             </h3>
                         </div>
                         <div class="mt-4 text-foreground-50">
-                            <p class="text-lg lg:text-xl">{{post['description']}}</p>
+                            <p class="font-normal text-lg lg:text-xl">{{post['description']}}</p>
                         </div>
                     </RouterLink>
                 </div>
