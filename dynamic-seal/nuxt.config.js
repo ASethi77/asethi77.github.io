@@ -26,6 +26,9 @@ export default defineNuxtConfig({
     content: {
         // https://content.nuxtjs.org/api/configuration
         documentDriven: false,
+        experimental: {
+            search: true
+        },
         highlight: {
             // Theme used in all color schemes.
             theme: {
@@ -79,7 +82,8 @@ export default defineNuxtConfig({
             "@fortawesome/free-brands-svg-icons",
             "@fortawesome/free-regular-svg-icons",
             "@fortawesome/free-solid-svg-icons",
-            "@fortawesome/vue-fontawesome"
+            "@fortawesome/vue-fontawesome",
+            "vue3-excel-editor"
         ]
     }
 })
