@@ -51,9 +51,6 @@ export default defineNuxtConfig({
         '@/assets/css/main.scss',
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
-    router: {
-        base: '/'
-    },
     head: {
         meta: [
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },

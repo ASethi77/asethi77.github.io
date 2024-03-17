@@ -18,4 +18,4 @@ spreadsheets you can import into DigiKey for fast ordering.
 I'd recommend keeping a good chunk of the E6 series around, plus some 0-ohm resistors to
 jumper configuration pins.
 
-[Digikey Spreadsheet](/docs/pcb/Digikey_Resistor_Inventory.xlsx)
+<a href="/docs/pcb/Digikey_Resistor_Inventory.xlsx">Digikey Resistor Spreadsheet</a>
