@@ -19,3 +19,5 @@ I'd recommend keeping a good chunk of the E6 series around, plus some 0-ohm resi
 jumper configuration pins.
 
 [Digikey Resistor Spreadsheet](/docs/pcb/Digikey_Resistor_Inventory.xlsx){target="_blank" download="Digikey_Resistor_Inventory.xlsx"}
+
+<LiveExcel data-excel-url="/docs/pcb/Digikey_Resistor_Inventory.xlsx"></LiveExcel>
