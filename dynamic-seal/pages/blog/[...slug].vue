@@ -53,7 +53,7 @@
     p, li, ul, ol, td, tr, th {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'IBM Plex Sans', sans-serif;
       @apply text-foreground-50; 
-      @apply font-medium;
+      @apply font-normal;
     }
 
     p, li, ul, ol, td, tr, th {
