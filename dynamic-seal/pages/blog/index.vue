@@ -7,12 +7,12 @@
                 <div class="post min-h-24 my-12 w-full rounded-lg" v-for="post in postList">
                     <RouterLink v-if="post['published']" :to="post['_path']">
                         <div class="flex flex-col leading-[4rem] md:flex-row justify-between items-start" >
-                            <h2 class="inline leading-none my-auto text-2xl lg:text-3xl text-red-500 font-semibold">
+                            <h2 class="inline post-title my-auto text-2xl lg:text-3xl text-red-500 font-semibold">
                                 <span class="align-bottom ">
                                     {{post['title']}}
                                 </span>
                             </h2>
-                            <h3 class="my-auto leading-none text-xl lg:text-2xl text-red-700 md:text-right">
+                            <h3 class="my-auto post-title text-xl lg:text-2xl text-red-700 md:text-right">
                                 <span class="align-center md:align-bottom ">
                                     {{ post['date'] }}
                                     <font-awesome-icon class="ml-2" icon="fa-regular fa-calendar"></font-awesome-icon>
@@ -28,6 +28,12 @@
         </div>
     </div>
 </template>
+
+<style>
+.post-title {
+    line-height: 1.25;
+}
+</style>
 
 <script>
 import { format, parseISO } from "date-fns";
