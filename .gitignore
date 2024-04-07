@@ -2,5 +2,4 @@ _site/
 .sass-cache/
 .DS_Store
 *.code-workspace
-full-of-empty-space/src/tailwind.css
-full-of-empty-space/package-lock.json
+.idea

@@ -128,28 +128,44 @@ can accommodate the extra load with room to spare.
 
 I need to read more about types of wiring, e.g. THHN vs. NM-B (Romex), solid and stranded for this application, etc. Long story short though it seems THHN is more heat resistant with its
 nylon insulation, and if I'm running a 50 A welding circuit, I'd probably want to go for a 6 AWG cable to make sure my wires have no chance of overheating. I found [this link](https://www.cerrowire.com/products/resources/tables-calculators/ampacity-charts/)
-on ampacity charts to be particularly useful because it also covers the thermal rating for each wire type. For example, it shows your normal Romex wiring can only handle temperatures of up to
-60 degrees C, which it'll hit with a continuous current of 55A. Safe for a welder, but for example if someone 20 years from now thought they were being smart and wanted to use this outlet to charge
-an electric car, they'd probably melt the wires. On the other hand, the chart shows that THHN wire can withstand temps up to 90 deg C, which it'll hit with a continuous current of 75 A.
-I'd much rather get a bit more expensive wiring to make sure I have that thermal margin, especially since welding is all about drawing high continous current.
+on ampacity charts to be particularly useful because it also covers the thermal rating for each wire type. With 6 AWG being rated for
+55A of continuous current that should be more than sufficient for a welding circuit, or even something like a level 2 EV charger.
 
-Turns out gauge isn't dependent on whether the conductors are stranded or solid at all, the current rating is the same.
-
-I'm gonna use 6/2 romex (2 hots, 1 ground). 
+I'm using 6/2 Romex (NM-B) because it is simple to wire, cost-effective, and still rated to sustain my use case with no real concerns.
+I'm using 6/2 instead of 6/3 because I decided I do not need a neutral wire for a 120V supply -- just the 2 hots and a ground.
+I don't ever intend to connect 120V devices to my ciruit.
 
 ### Selecting a plug
 
-I'm gonna use a NEMA 6-50R, since my plug is NEMA 6-50 and I can't imagine having a need for the 120V. I don't wanna spend an extra 50 bucks on adapters for my welder.
+I installed a NEMA 6-50R receptacle, since my plug is NEMA 6-50 and I can't imagine having a need for the 120V. I don't wanna spend an extra 50 bucks on adapters for my welder
+(or have extra failure points, either).
 
 1. https://www.homedepot.com/p/Leviton-50-Amp-Double-Pole-Single-Outlet-Black-R20-05378-P00/311373590
 2. https://www.homedepot.com/p/Leviton-50-Amp-2-Pole-Flush-Mount-Shallow-Single-Outlet-Black-NEMA-6-50R-R10-05374-S00/300324220
 
+I've heard bad things about the Leviton's plug/unplug cycle life which has caused arcing across some of the internal
+spring contacts due to the springs wearing out and no longer having tight connections on the plugs. A better receptacle
+to use would be a Hubbel industrial contact. The reason I still am using the Leviton contact is because I am avoiding
+constantly plugging and unplugging my devices to begin with, and while I'm using the outlet I'll be working very close
+to the breaker so I can shut things off quickly in an emergency anyways.
+
 ### Selecting a breaker
 
-I'm gonna use a 50 amp non-GFCI breaker.
-
-https://www.homedepot.com/p/Square-D-Homeline-50-Amp-2-Pole-Circuit-Breaker-HOM250CP-HOM250CP/202353323
+To be compliant with NEC code I am using a 50-amp GFCI breaker. GFCI branch protection is required for garage and kitchen circuits,
+and because there's no such thing as a GFCI NEMA-50 receptacle I have to provide that protection at the breaker.
 
 ### Selecting conduit
 
-I'll see what home depot has but 1" EMT should be plenty.
+When you are selecting conduit think about:
+
+* The NEC code's [conduit fill requirements](https://www.elliottelectric.com/StaticPages/ElectricalReferences/ElectricalTables/Conduit_Fill_Table.aspx)[^1]
+* How easy it is for you to work with for the tools you have and the run you have
+* How much protection you need in the environment the cable is in.
+
+I opted for 1" EMT conduit, which is pretty overkill, but provides ample room for the cable to run without overheating
+and makes the cable less likely to get caught or damaged while it's getting pulled. It was a PITA to bend though so
+I'd recommend using 3/4" EMT in the future (or a flex conduit), especially if you're doing longer runs like across a
+garage or something.
+
+[^1]: Conduit fill is typically based on loose connectors like THHN, not Romex. You should treat Romex as a single conductor
+      based on the outer jacket thickness. For 6AWG Romex using a 0.029 diameter you'd need at least 0.5" diameter EMT conduit.

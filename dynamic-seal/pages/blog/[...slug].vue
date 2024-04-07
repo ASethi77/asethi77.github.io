@@ -33,6 +33,24 @@
   }
 
   #post-content {
+    @apply pb-10;
+
+    .footnotes:before {
+      content: "Footnotes";
+    }
+    .footnotes {
+      @apply pt-5;
+      @apply border-t-2;
+      li {
+        color: #737373;
+        @apply divide-y;
+        @apply italic;
+      }
+      li:first-child {
+        @apply pt-5;
+      }
+    }
+
     // Stole this from https://css-tricks.com/full-width-containers-limited-width-parents/#aa-no-calc-needed
     .section-highlight {
       width: 100vw;
