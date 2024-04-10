@@ -51,6 +51,11 @@
       }
     }
 
+    code {
+      font-size: 0.9rem;
+      @apply whitespace-nowrap;
+    }
+
     // Stole this from https://css-tricks.com/full-width-containers-limited-width-parents/#aa-no-calc-needed
     .section-highlight {
       width: 100vw;
