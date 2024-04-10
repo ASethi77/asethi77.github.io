@@ -17,9 +17,12 @@ Then you understand my plight with using the dinosaur that is QIDI Print:
 
 It's Cura-based, which is nice because Cura has always been pretty friendly, but the QIDI proprietary modules
 haven't kept up with open-source slicers including Cura itself and [OrcaSlicer](https://github.com/SoftFever/OrcaSlicer).
-Understandable, but a somewhat sad state of affairs.
+Understandable, but an unfortunate state of affairs. QIDI does offer plugins and profiles to use the X-CF pro with
+newer versions of Cura, but it's still not quite up to date. (I should clarify that the QIDI team and their support is
+excellent. Since QIDI has shifted towards developing Klipper-based printers I don't fault them for not keeping older printer models
+at the bleeding edge.)
 
-It would be better to adapt the X-CF Pro profiles to be used in 3rd-party slicers. Luckily,
+It would be better to adapt the X-CF Pro profiles to be used in 3rd-party slicers. Luckily, QIDI provides
 OrcaSlicer brings in most of QIDI's filament profiles and base models for
 the X-CF Pro, which is excellent, however the [Marlin-based G Code](https://marlinfw.org/meta/gcode/) at the start
 and end of prints does not properly bias the nozzle Z offset, which results in my printer printing in midair.
